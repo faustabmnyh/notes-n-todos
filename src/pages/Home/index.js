@@ -20,7 +20,7 @@ const Home = () => {
             <li className="home__item">
               <Link to="/notes" className="home__link">
                 <button className="home__btn">
-                  Go To Dashboard <ChevronRightIcon />
+                  Go To Notes <ChevronRightIcon />
                 </button>
               </Link>
             </li>

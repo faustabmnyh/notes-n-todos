@@ -7,6 +7,35 @@
   overflow: hidden;
 }
 
+.todo__header {
+  width: 100%;
+  display: flex;
+  padding: .5em;
+  justify-content: flex-end;
+  box-sizing: border-box;
+}
+
+.todo__gotoNotes {
+  display: flex;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 1em;
+  cursor: pointer;
+  font-weight: 500;
+  color: #fff;
+  background: #565656;
+  box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.3), 10px 7px 20px #0007;
+  font-family: "poppins", Arial, Helvetica, sans-serif;
+}
+
+.todo__gotoNotes:hover,
+.todo__gotoNotes:focus {
+  box-shadow: inset -7px -7px 15px rgba(255, 255, 255, 0.1),
+    inset 7px 7px 15px #0004;
+}
+
 .todo form {
   display: flex;
   justify-content: space-between;
@@ -50,6 +79,7 @@
   cursor: pointer;
   color: #fff;
   font-weight: 500;
+  box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.3), 10px 7px 20px #0007;
 }
 
 .todo__btn:hover,
@@ -119,7 +149,7 @@ select {
 .todo__content {
   overflow: scroll;
   padding: 2em;
-  height: calc(100vh - 10rem);
+  height: calc(100vh - 13rem);
   box-sizing: border-box;
 }
 

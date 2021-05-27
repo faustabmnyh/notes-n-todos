@@ -39,9 +39,9 @@
   outline: none;
   border: none;
   border-radius: 10px;
-  width: 9rem;
   font-size: 14px;
-  padding: 1em;
+  width: 9rem;
+  padding: 1em 1.7em;
   cursor: pointer;
   font-weight: 500;
   color: #fff;

@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import ToDoContent from "../../Components/ToDoContent";
 import { TodosContext } from "../../context/todos";
 import "./ToDo.css";
@@ -43,6 +44,12 @@ const ToDo = () => {
 
   return (
     <div className="todo">
+      <div className="todo__header">
+        <Link to="/notes">
+          <button className="todo__gotoNotes">Go To Notes</button>
+        </Link>
+      </div>
+
       <div>
         <form action="" onSubmit={handleSubmit}>
           <div className="todo__addTask">
