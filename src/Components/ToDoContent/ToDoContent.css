@@ -1,0 +1,49 @@
+.todoContent {
+  display: flex;
+  align-items: flex-start;
+}
+
+.todoContent__main,
+.todoContent__success {
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  z-index: 1;
+  width: 100%;
+  padding: 1em;
+  box-shadow: -10px -10px 20px #fff, 10px 10px 20px #0002;
+  box-sizing: border-box;
+  margin-bottom: 2rem;
+}
+
+/* .todoContent__main {
+  margin-bottom: 10px;
+} */
+
+.todoContent__success {
+  box-shadow: none;
+}
+
+.todoContent__btn {
+  display: flex;
+  margin-left: 2rem;
+}
+.todoContent__text {
+  font-size: 16px;
+}
+
+.todoContent__textSuccess {
+  text-decoration: line-through;
+  font-size: 16px;
+}
+
+.todoContent__btnDelete,
+.todoContent__btnTick {
+  cursor: pointer;
+}
+
+.todoContent__btnTick {
+  margin-right: 1rem;
+}

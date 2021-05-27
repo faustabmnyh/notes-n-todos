@@ -1,0 +1,128 @@
+.todo {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 10%;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.todo form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.todo__addTask {
+  display: flex;
+  width: 100%;
+  margin-right: 1rem;
+}
+
+.todo__input {
+  width: 100%;
+  padding: 1em;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: 10px 0 0 10px;
+  font-family: "poppins", Arial, Helvetica, sans-serif;
+  background: linear-gradient(to bottom, #f4f4f4, #f1f1f1);
+  box-shadow: -10px -10px 20px #fff, 10px 10px 20px #0002;
+}
+
+.todo__input:focus,
+.todo__input:hover {
+  box-shadow: inset -7px -7px 20px #fff, inset 7px 7px 20px #0002;
+}
+
+.todo__btn {
+  width: 120px;
+  padding: 1em;
+  box-sizing: border-box;
+  background: #565656;
+  border-radius: 0 10px 10px 0;
+  font-family: "poppins", Arial, Helvetica, sans-serif;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+}
+
+.todo__btn:hover,
+.todo__btn:focus {
+  box-shadow: inset -7px -7px 15px rgba(255, 255, 255, 0.1),
+    inset 7px 7px 15px #0004;
+}
+
+.todo__todo {
+  color: #565656;
+  font-weight: 500;
+  font-size: 20px;
+  margin: 1rem 0;
+  font-weight: 600;
+}
+
+.todo__select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: -10px -10px 20px #fff, 10px 10px 20px #0002;
+}
+
+.todo__select:hover,
+.todo__select:focus {
+  box-shadow: inset -7px -7px 20px #fff, inset 7px 7px 20px #0002;
+}
+
+select {
+  cursor: pointer;
+  width: 15rem;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  font-size: 14px;
+  color: #565656;
+  font-family: "poppins", Arial, Helvetica, sans-serif;
+  background: transparent;
+  padding: 1em !important;
+}
+
+.todo__filter {
+  padding: 10px;
+}
+
+.todo__select::after {
+  content: "\25BC";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 50px;
+  bottom: 0;
+  right: 0;
+  color: white;
+  background: #565656;
+  cursor: pointer;
+  pointer-events: none;
+}
+.todo__select:hover::after {
+  box-shadow: inset -7px -7px 15px rgba(255, 255, 255, 0.1),
+    inset 7px 7px 15px #0004;
+}
+
+.todo__content {
+  overflow: scroll;
+  padding: 2em;
+  height: calc(100vh - 10rem);
+  box-sizing: border-box;
+}
+
+.todo__content::-webkit-scrollbar {
+  display: none;
+}

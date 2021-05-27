@@ -1,0 +1,138 @@
+.notes {
+  width: 100%;
+  padding: 1rem 10%;
+  box-sizing: border-box;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.notes__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.notes__headerLeft {
+  display: flex;
+  align-items: center;
+}
+
+.notes__logo {
+  margin-right: 1rem;
+}
+
+.notes__title {
+  color: #565656;
+}
+
+.notes__subTitle {
+  color: #8a8a8a;
+}
+
+.notes__subTitle span {
+  font-weight: bolder;
+}
+
+.notes__gotoTodo,
+.notes__btn,
+.notes__btnCancel {
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  width: 9rem;
+  font-size: 14px;
+  padding: 1em;
+  cursor: pointer;
+  font-weight: 500;
+  color: #fff;
+  background: #565656;
+  box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.3), 10px 7px 20px #0007;
+  font-family: "poppins", Arial, Helvetica, sans-serif;
+}
+
+.notes__gotoTodo:hover,
+.notes__btn:hover,
+.notes__gotoTodo:focus,
+.notes__btn:focus {
+  box-shadow: inset -7px -7px 15px rgba(255, 255, 255, 0.1),
+    inset 7px 7px 15px #0004;
+}
+
+.notes__section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.notes form {
+  display: flex;
+  flex-direction: column;
+  flex: 0.3;
+  padding: 2em;
+}
+
+.notes__formInput {
+  border-radius: 10px;
+  height: 20px;
+  padding: 1em 1.25em;
+  font-weight: 500;
+  font-size: 15px;
+  font-family: "poppins", Arial, Helvetica, sans-serif;
+  outline: none;
+  border: none;
+  background: linear-gradient(to bottom, #f4f4f4, #f1f1f1);
+  box-shadow: -10px -10px 20px #fff, 10px 10px 20px #0002;
+}
+
+.notes textarea {
+  padding: 1em 1.25em;
+  outline: none;
+  resize: none;
+  margin: 20px 0;
+  font-size: 15px;
+  font-family: "poppins", Arial, Helvetica, sans-serif;
+  min-height: 200px;
+  border-radius: 10px;
+  font-weight: 500;
+  border: none;
+  background: linear-gradient(to bottom, #f4f4f4, #f1f1f1);
+  box-shadow: -10px -10px 20px #fff, 10px 10px 20px #0002;
+}
+
+.notes__formInput:focus,
+.notes textarea:focus,
+.notes__formInput:hover,
+.notes textarea:hover {
+  box-shadow: inset -7px -7px 20px #fff, inset 7px 7px 20px #0002;
+}
+
+.notes__allBtn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.notes__card {
+  display: flex;
+  flex-direction: column;
+  flex: 0.7;
+  padding: 2em;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  height: calc(100vh - 10rem);
+}
+
+.notes__card::-webkit-scrollbar {
+  display: none;
+}
+
+.notes__btnCancel {
+  background: linear-gradient(to bottom, #f4f4f4, #f1f1f1);
+  margin-right: 1rem;
+  color: #565656;
+  font-weight: 500;
+  box-shadow: -5px -5px 10px #fff, 5px 5px 10px #0002;
+}
+
+.notes__btnCancel:hover,
+.notes__btnCancel:focus {
+  box-shadow: inset -5px -5px 10px #fff, inset 5px 5px 10px #0002;
+}

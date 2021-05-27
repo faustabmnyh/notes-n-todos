@@ -1,0 +1,43 @@
+.card {
+  width: 90%;
+  display: flex;
+  overflow: hidden;
+  min-height: 120px;
+  border-radius: 20px;
+  flex-direction: column;
+  z-index: 1;
+  margin-bottom: 40px;
+  padding:2rem;
+  position: relative;
+  z-index: 1;
+  box-shadow: -10px -10px 20px #fff, 10px 10px 20px #0002;
+}
+
+.card__title {
+  font-size: 20px;
+  color: #565656;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.card__time {
+  font-size: 12px;
+  color: #b6b6b6;
+}
+
+.card__body {
+  margin: 10px 0;
+  color: #8a8a8a;
+  font-size: 16px;
+}
+
+.card__utils {
+  display: flex;
+}
+.card__btnIcon {
+  margin-right: 1rem !important;
+}
+
+.card__btnIcon:hover {
+  box-shadow: inset -7px -7px 20px #fff, inset 7px 7px 20px #0002;
+}
