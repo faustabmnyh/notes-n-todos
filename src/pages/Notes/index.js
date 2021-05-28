@@ -47,7 +47,8 @@ const Notes = () => {
         body: "",
       });
       data.id = values.id;
-      updateNote(data);
+      console.log(values);
+      updateNote({ ...data, time: values.time });
     }
   };
 
@@ -57,6 +58,7 @@ const Notes = () => {
       body: note.body,
       id: note.id,
       button: "Update",
+      time: note.time,
     });
   };
 

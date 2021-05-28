@@ -4,17 +4,18 @@ import IconButton from "@material-ui/core/IconButton";
 import UpdateIcon from "@material-ui/icons/Update";
 import { useContext } from "react";
 import { NotesContext } from "../../context/notes";
+import moment from "moment";
 
 const Card = ({ note, ...rest }) => {
   const { deleteNote } = useContext(NotesContext);
-
-  console.log("this is ", new Date(note.time).toISOString().substr(0, 10));
 
   return (
     <div className="card">
       <div>
         <h3 className="card__title">{note.title}</h3>
-        <p className="card__time">2 hours ago</p>
+        <p className="card__time">
+          {moment(new Date(note.time).toISOString()).fromNow()}
+        </p>
         <p className="card__body">{note.body}</p>
       </div>
       <div className="card__utils">
