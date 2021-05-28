@@ -1,6 +1,7 @@
 .notes {
-  width: 100%;
-  padding: 1rem 10%;
+  width: 80%;
+  margin: 0 auto;
+  padding: 2em 1em;
   box-sizing: border-box;
   height: 100vh;
   overflow: hidden;
@@ -10,6 +11,8 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
+  box-sizing: border-box;
+  padding: 0 2em;
 }
 
 .notes__headerLeft {
@@ -23,10 +26,12 @@
 
 .notes__title {
   color: #565656;
+  font-size: clamp(1.4rem, 2vw, 3rem);
 }
 
 .notes__subTitle {
   color: #8a8a8a;
+  font-size: clamp(0.9rem, 0.75vw, 2rem);
 }
 
 .notes__subTitle span {
@@ -38,10 +43,11 @@
 .notes__btnCancel {
   outline: none;
   border: none;
-  border-radius: 10px;
-  font-size: 14px;
-  width: 9rem;
-  padding: 1em 1.7em;
+  border-radius: 0.7em;
+  /* font-size: 14px; */
+  font-size: clamp(0.8rem, 1.1vw, 1.3rem);
+  width: 8em;
+  padding: 1em 1.75em;
   cursor: pointer;
   font-weight: 500;
   color: #fff;
@@ -50,12 +56,23 @@
   font-family: "poppins", Arial, Helvetica, sans-serif;
 }
 
-.notes__gotoTodo:hover,
 .notes__btn:hover,
-.notes__gotoTodo:focus,
 .notes__btn:focus {
   box-shadow: inset -7px -7px 15px rgba(255, 255, 255, 0.1),
     inset 7px 7px 15px #0004;
+}
+
+.notes__gotoTodo {
+  background: transparent;
+  box-shadow: none;
+  color: #565656;
+  width: initial;
+  padding: 1em 1.75em;
+}
+
+.notes__gotoTodo:hover,
+.notes__gotoTodo:focus {
+  box-shadow: inset -5px -5px 10px #fff, inset 5px 5px 10px #0002;
 }
 
 .notes__section {
@@ -75,7 +92,9 @@
   height: 20px;
   padding: 1em 1.25em;
   font-weight: 500;
-  font-size: 15px;
+  /* font-size: 15px; */
+  font-size: clamp(0.9rem, 1.15vw, 1.3rem);
+
   font-family: "poppins", Arial, Helvetica, sans-serif;
   outline: none;
   border: none;
@@ -88,7 +107,9 @@
   outline: none;
   resize: none;
   margin: 20px 0;
-  font-size: 15px;
+  /* font-size: 15px; */
+  font-size: clamp(0.9rem, 1.15vw, 1.3rem);
+
   font-family: "poppins", Arial, Helvetica, sans-serif;
   min-height: 200px;
   border-radius: 10px;
@@ -135,4 +156,48 @@
 .notes__btnCancel:hover,
 .notes__btnCancel:focus {
   box-shadow: inset -5px -5px 10px #fff, inset 5px 5px 10px #0002;
+}
+
+@media (max-width: 500px) {
+  .notes__header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .notes__headerLeft {
+    display: flex;
+    flex-direction: column;
+  }
+  .notes__gotoTodo {
+    margin-top: 0.5rem;
+  }
+  .notes__title {
+    text-align: center;
+  }
+
+  .notes__subTitle {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .notes {
+    overflow: initial;
+  }
+  .notes__header {
+    padding: 0;
+  }
+
+  .notes__section {
+    flex-direction: column-reverse;
+  }
+  .notes__card {
+    overflow-y: initial;
+    height: initial;
+    padding: 0;
+    margin-top: 3rem;
+  }
+  .notes form {
+    margin-top: 1rem;
+    padding: 0;
+  }
 }

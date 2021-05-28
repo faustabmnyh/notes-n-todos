@@ -8,6 +8,8 @@ import { NotesContext } from "../../context/notes";
 const Card = ({ note, ...rest }) => {
   const { deleteNote } = useContext(NotesContext);
 
+  console.log("this is ", new Date(note.time).toISOString().substr(0, 10));
+
   return (
     <div className="card">
       <div>
@@ -17,13 +19,13 @@ const Card = ({ note, ...rest }) => {
       </div>
       <div className="card__utils">
         <IconButton {...rest} className="card__btnIcon">
-          <UpdateIcon color="primary" />
+          <UpdateIcon />
         </IconButton>
         <IconButton
           onClick={() => deleteNote(note.id)}
           className="card__btnIcon"
         >
-          <DeleteIcon color="secondary" />
+          <DeleteIcon />
         </IconButton>
       </div>
     </div>

@@ -84,7 +84,7 @@ const Notes = () => {
           </div>
         </div>
         <Link to="/todo">
-          <button className="notes__gotoTodo">Go To ToDo</button>
+          <button className="notes__gotoTodo">Go To ToDo &gt;</button>
         </Link>
       </div>
       <div className="notes__section">

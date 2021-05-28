@@ -63,7 +63,7 @@
   border-radius: 8px;
   margin: 1.5em 0;
   /* font-size: px; */
-  font-size: clamp(.9rem, 1vw, 3rem);
+  font-size: clamp(0.9rem, 1vw, 3rem);
   font-family: "poppins", Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   border: none;
@@ -103,8 +103,7 @@
     border-radius: 15px;
   }
 
-  
-.home__logo {
-  max-width: 120px;
-}
+  .home__logo {
+    max-width: 120px;
+  }
 }

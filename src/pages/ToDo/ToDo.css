@@ -23,6 +23,7 @@
 
 .todo__title {
   color: #565656;
+  font-size: clamp(1.4rem, 2vw, 3rem);
 }
 
 .todo__logo {
@@ -31,6 +32,7 @@
 
 .todo__subTitle {
   color: #8a8a8a;
+  font-size: clamp(0.9rem, 0.75vw, 2rem);
 }
 
 .todo__subTitle span {
@@ -42,20 +44,20 @@
   outline: none;
   border: none;
   border-radius: 10px;
-  font-size: 14px;
-  padding: 1em;
+  /* font-size: 14px; */
+  font-size: clamp(0.8rem, 1.1vw, 1.3rem);
+  padding: 1em 1.75em;
   cursor: pointer;
   font-weight: 500;
   color: #fff;
-  background: #565656;
-  box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.3), 10px 7px 20px #0007;
+  color: #565656;
+  background: transparent;
   font-family: "poppins", Arial, Helvetica, sans-serif;
 }
 
 .todo__gotoNotes:hover,
 .todo__gotoNotes:focus {
-  box-shadow: inset -7px -7px 15px rgba(255, 255, 255, 0.1),
-    inset 7px 7px 15px #0004;
+  box-shadow: inset -5px -5px 10px #fff, inset 5px 5px 10px #0002;
 }
 
 .todo form {
@@ -78,8 +80,9 @@
   border: none;
   outline: none;
   font-weight: 500;
-  font-size: 15px;
-  border-radius: 10px 0 0 10px;
+  /* font-size: 15px; */
+  font-size: clamp(0.8rem, 0.75vw, 1.5rem);
+  border-radius: 1em 0 0 1em;
   font-family: "poppins", Arial, Helvetica, sans-serif;
   background: linear-gradient(to bottom, #f4f4f4, #f1f1f1);
   box-shadow: -10px -10px 20px #fff, 10px 10px 20px #0002;
@@ -91,9 +94,10 @@
 }
 
 .todo__btn {
-  width: 120px;
+  width: 11em;
   padding: 1em;
   box-sizing: border-box;
+  font-size: clamp(0.8rem, 0.75vw, 1.5rem);
   background: #565656;
   border-radius: 0 10px 10px 0;
   font-family: "poppins", Arial, Helvetica, sans-serif;
@@ -113,7 +117,8 @@
 .todo__todo {
   color: #565656;
   font-weight: 500;
-  font-size: 20px;
+  /* font-size: 20px; */
+  font-size: clamp(1.05rem, 1.2vw, 2.5rem);
   margin: 1rem 0;
   font-weight: 600;
 }
@@ -133,11 +138,12 @@
 
 select {
   cursor: pointer;
-  width: 15rem;
+  width: 15em;
   border: none;
   outline: none;
   font-weight: 500;
-  font-size: 14px;
+  /* font-size: 14px; */
+  font-size: clamp(0.8rem, 0.75vw, 1.5rem);
   color: #565656;
   font-family: "poppins", Arial, Helvetica, sans-serif;
   background: transparent;
@@ -155,7 +161,7 @@ select {
   align-items: center;
   justify-content: center;
   height: 100%;
-  width: 50px;
+  width: 4em;
   bottom: 0;
   right: 0;
   color: white;
@@ -177,4 +183,52 @@ select {
 
 .todo__content::-webkit-scrollbar {
   display: none;
+}
+
+@media (max-width: 650px) {
+  .todo {
+    height: fit-content;
+    overflow: initial;
+  }
+
+  .todo form {
+    margin-top: 1rem;
+    flex-direction: column;
+  }
+
+  .todo__addTask {
+    margin-bottom: 1rem;
+  }
+
+  .todo__content {
+    overflow: initial;
+    height: fit-content;
+    padding: 0;
+  }
+
+  .todo__header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .todo__left {
+    display: flex;
+    flex-direction: column;
+  }
+  .todo__gotoNotes {
+    margin-top: 0.5rem;
+  }
+  .todo__title {
+    text-align: center;
+  }
+
+  .todo__subTitle {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1440px) {
+  .todo__input,
+  select {
+    padding: 1.5em !important;
+  }
 }

@@ -58,37 +58,31 @@ const ToDo = () => {
         </div>
 
         <Link to="/notes">
-          <button className="todo__gotoNotes">Go To Notes</button>
+          <button className="todo__gotoNotes">Go To Notes &gt;</button>
         </Link>
       </div>
 
-      <div>
-        <form action="" onSubmit={handleSubmit}>
-          <div className="todo__addTask">
-            <input
-              type="text"
-              placeholder="Add Your Task Here..."
-              className="todo__input"
-              value={values.text}
-              required
-              onChange={(e) => setValues({ text: e.target.value })}
-            />
-            <button className="todo__btn">Add Task</button>
-          </div>
+      <form action="" onSubmit={handleSubmit}>
+        <div className="todo__addTask">
+          <input
+            type="text"
+            placeholder="Add Your Task Here..."
+            className="todo__input"
+            value={values.text}
+            required
+            onChange={(e) => setValues({ text: e.target.value })}
+          />
+          <button className="todo__btn">Add Task</button>
+        </div>
 
-          <div className="todo__select">
-            <select
-              name="todos"
-              className="todo__filter"
-              onChange={handleStatus}
-            >
-              <option value="all">All</option>
-              <option value="completed">Completed</option>
-              <option value="uncompleted">Uncompleted</option>
-            </select>
-          </div>
-        </form>
-      </div>
+        <div className="todo__select">
+          <select name="todos" className="todo__filter" onChange={handleStatus}>
+            <option value="all">All</option>
+            <option value="completed">Completed</option>
+            <option value="uncompleted">Uncompleted</option>
+          </select>
+        </div>
+      </form>
       <p className="todo__todo">TO DO :</p>
       <div className="todo__content">
         {filterTodos.map((todo) => {
