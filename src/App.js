@@ -1,5 +1,5 @@
 import { NotesProvider } from "./context/notes";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { HashRouter as Router, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import ToDo from "./pages/ToDo";
 import { TodosProvider } from "./context/todos";

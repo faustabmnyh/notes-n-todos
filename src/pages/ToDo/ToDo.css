@@ -75,7 +75,7 @@
 
 .todo__input {
   width: 100%;
-  padding: 1em;
+  padding: 1.5em;
   box-sizing: border-box;
   border: none;
   outline: none;
@@ -147,7 +147,7 @@ select {
   color: #565656;
   font-family: "poppins", Arial, Helvetica, sans-serif;
   background: transparent;
-  padding: 1em !important;
+  padding: 1.5em !important;
 }
 
 .todo__filter {
@@ -225,10 +225,10 @@ select {
     text-align: center;
   }
 }
-
+/* 
 @media (min-width: 1440px) {
   .todo__input,
   select {
     padding: 1.5em !important;
   }
-}
+} */
