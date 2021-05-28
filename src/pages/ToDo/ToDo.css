@@ -10,9 +10,31 @@
 .todo__header {
   width: 100%;
   display: flex;
-  padding: .5em;
-  justify-content: flex-end;
+  padding: 0.5em;
+  justify-content: space-between;
+  align-items: center;
   box-sizing: border-box;
+}
+
+.todo__left {
+  display: flex;
+  align-items: center;
+}
+
+.todo__title {
+  color: #565656;
+}
+
+.todo__logo {
+  margin-right: 1rem;
+}
+
+.todo__subTitle {
+  color: #8a8a8a;
+}
+
+.todo__subTitle span {
+  font-weight: bolder;
 }
 
 .todo__gotoNotes {
@@ -149,7 +171,7 @@ select {
 .todo__content {
   overflow: scroll;
   padding: 2em;
-  height: calc(100vh - 13rem);
+  height: calc(100vh - 15rem);
   box-sizing: border-box;
 }
 

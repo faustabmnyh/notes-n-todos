@@ -72,7 +72,10 @@ const Notes = () => {
     <div className="notes">
       <div className="notes__header">
         <div className="notes__headerLeft">
-          <img src="/images/logo.png" alt="" className="notes__logo" />
+          <Link to="/">
+            <img src="/images/logo.png" alt="" className="notes__logo" />
+          </Link>
+
           <div>
             <h1 className="notes__title">Wellcome to MG Notes</h1>
             <p className="notes__subTitle">

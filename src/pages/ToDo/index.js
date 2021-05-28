@@ -45,6 +45,18 @@ const ToDo = () => {
   return (
     <div className="todo">
       <div className="todo__header">
+        <div className="todo__left">
+          <Link to="/">
+            <img src="/images/logo.png" alt="" className="todo__logo" />
+          </Link>
+          <div>
+            <h1 className="todo__title">Wellcome to MG To Do</h1>
+            <p className="todo__subTitle">
+              Set your <span>goals</span> every day.
+            </p>
+          </div>
+        </div>
+
         <Link to="/notes">
           <button className="todo__gotoNotes">Go To Notes</button>
         </Link>
